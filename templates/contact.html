@@ -1,0 +1,67 @@
+
+	{% include "header.html "%}
+
+
+	<div class="clearfix"></div>
+	<!-- Header section end  -->
+
+
+	<!-- Contact section  -->
+	<section class="contact-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="contact-text">
+
+							{% if msg_sent: %}
+            			<h3>Successfully sent your message</h3>
+            				{% else: %}
+            			<h3>Contact Me</h3>
+            				{% endif %}
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+						<ul>
+							<li>Main Str, no 23, NY, <br>New York PK 23589</li>
+							<li>+546 990221 123</li>
+							<li>contact@industryalinc.com</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<form class="contact-form" id="contactForm" action="{{ url_for('contact') }}" method="post" novalidate>
+						<div class="row">
+							<div class="col-lg-6">
+								<input type="text" name="name" placeholder="Your Name">
+							</div>
+							<div class="col-lg-6">
+								<input type="text" name="email" placeholder="Your Email">
+							</div>
+							<div class="col-lg-4">
+							</div>
+							<div class="col-lg-12">
+								<input type="text" name="subject" placeholder="Subject">
+								<textarea class="text-msg" name="message" placeholder="Message"></textarea>
+								<button class="site-btn" type="submit">send message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Contact section end  -->
+
+	<!-- Instagram section -->
+	<div class="instagram-section">
+		<h6>Instagram Feed</h6>
+		<div id="instafeed" class="instagram-slider owl-carousel"></div>
+	</div>
+	<!-- Instagram section end -->
+	
+
+
+	<!--====== Javascripts & Jquery ======-->
+	{% include "footer.html "%}
+
+	</body>
+</html>
